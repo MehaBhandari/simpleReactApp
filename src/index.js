@@ -11,9 +11,45 @@ const user = [
     gender: 'Male'},
     {name: 'Abhishek Mishra',
     gender: 'Male'}
-] 
+];
+
+function App() {
+    return(
+        <div>
+            <Header></Header>
+            <Body></Body>
+            <Footer></Footer>
+        </div>
+    )
+};
+
+function Header() {
+    return(
+        <div>
+            <MyUser i="1" user={user}></MyUser> <br /> <br />
+        </div>
+    )
+};
+
+function Body() {
+    return(
+      <div>
+          <h5>This is the body of the react dummy App</h5> <br /> <br /><br /> <br />
+      </div>
+    )
+};
+
+function Footer() {
+    return (
+        <div>
+            <hr/>
+            <p>This is the footer with all @Copyrights reserved.</p>
+        </div>
+    )
+};
+
 ReactDOM.render(
-    <MyUser i="2" user={user} />,
+    <App/>,
     document.getElementById('root')
 );
 // ReactDOM.render(
